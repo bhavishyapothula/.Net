@@ -1,0 +1,25 @@
+using System;  
+namespace HelloWorldApp 
+{ 
+	class Calculator 
+	{ 
+		static void Main(string[] args) 
+		{ 
+			Console.WriteLine("Enter number:");
+              		int a = Convert.ToInt32(Console.ReadLine());
+			Console.WriteLine("Enter number:");
+              		int b = Convert.ToInt32(Console.ReadLine());
+			Console.WriteLine("1.Addition 2.Subtraction 3.Multiplication 4.Division");
+			Console.WriteLine("Enter choice:");
+              		int c = Convert.ToInt32(Console.ReadLine());
+			if(c==1)
+            		Console.WriteLine(a+"+"+b+"="+(a+b)); 
+			if(c==2)
+			Console.WriteLine(a+"-"+b+"="+(a-b)); 
+			if(c==3)
+              		Console.WriteLine(a+"*"+b+"="+(a*b));
+			if(c==4)
+			Console.WriteLine(a+"/"+b+"="+(a/b)); 
+		} 
+    	} 
+} 
