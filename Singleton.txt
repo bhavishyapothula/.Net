@@ -1,0 +1,32 @@
+using System.IO;
+using System;
+
+sealed class Singleton
+{
+    private static int no_of_instances=0;
+    private static Singleton obj=new Singleton();
+    public static Singleton GenerateObj()
+    {
+            return obj;
+    }
+    private Singleton()
+    {
+        no_of_instances++;
+        Console.WriteLine("Number of instances created:"+no_of_instances);
+    }
+    public double CalculatePF(double salary)
+    {
+        return salary*0.12;
+    }
+    
+}
+public class Demo
+{
+    public static void Main()
+	{
+		Singleton s=Singleton.GenerateObj();
+		Console.WriteLine("Enter salary:");
+		double a = Convert.ToDouble(Console.ReadLine());
+		 Console.WriteLine("PF for "+a+" is "+s.CalculatePF(a));
+	}
+}
