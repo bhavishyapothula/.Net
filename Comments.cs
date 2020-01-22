@@ -20,7 +20,7 @@ namespace Salary
     {/// <summary>
     /// This method calculates DA for given basic salary 
     /// </summary>
-    /// <param name="salary">This takes double value</param>
+    /// <param name="salary">This method takes double value as parameter</param>
     /// <returns>Returns double value</returns>
         double CalculateDA(double salary)
         {
@@ -29,7 +29,7 @@ namespace Salary
         /// <summary>
         ///  This method calculates HRA for given basic salary 
         /// </summary>
-        /// <param name="salary">This takes double value</param>
+        /// <param name="salary">This method takes double value as parameter</param>
         /// <returns>Returns double value</returns>
         double CalculateHRA(double salary)
         {
@@ -38,7 +38,7 @@ namespace Salary
         /// <summary>
         ///  This method calculates PF for given basic salary
         /// </summary>
-        /// <param name="salary">This takes double value</param>
+        /// <param name="salary">This method takes double value as parameter</param>
         /// <returns>Returns double value</returns>
         double CalculatePF(double salary)
         {
@@ -47,7 +47,7 @@ namespace Salary
         /// <summary>
         ///  This method calculates Net for given basic salary
         /// </summary>
-        /// <param name="salary">This takes double value</param>
+        /// <param name="salary">This method takes double value as parameter</param>
         /// <returns>Returns double value</returns>
         public double CalculateNet(double salary)
         {
