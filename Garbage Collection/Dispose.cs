@@ -1,51 +1,49 @@
 using System;
-using System.IO;
-using System.Text;
 namespace GarbageCollectionDispose
 {
     /// <summary>
     /// This class implements IDisposable Interface
     /// </summary>
-    public class Program:IDisposable
+    public class Memorymgmt:IDisposable
     {
-        bool is_dispose_called = false;
+        bool isDisposeCalled = false;
         /// <summary>
-        /// Dispose function is implemented here,if it is called by developer suppresses the finalize method
+        /// Dispose function is implemented here,if it is called by developer suppresses the final method
         /// </summary>
         public void Dispose()
         {
             Dispose(true);
             GC.SuppressFinalize(this);
         }
-        protected void Dispose(bool dispose_both)
+        protected void Dispose(bool disposeBoth)
         {
-            if (!is_dispose_called)
+            if (!isDisposeCalled)
             {
-                if (dispose_both)
+                if (disposeBoth)
                 {
 
                     Console.WriteLine("Managed code disposes here");
                 }
 
                 Console.WriteLine("Unmanaged resources are released here.");
-                is_dispose_called = true;
+                isDisposeCalled = true;
             }
         }
         /// <summary>
         /// The destructor is converted to finalize method in IL code
         /// </summary>
-        ~Program()
+        ~Memorymgmt()
         {
             Console.WriteLine("Inside finalize");
             Dispose(false);
         }
         public static void Main(string[] args)
         {
- 
-            Program p = new Program();
-            p.Dispose();//This calls Dispose method
-            Program obj = new Program();//This calls Destructor to release unmanaged resources
-            using (Program q=new Program())//By using dispose method is automatically called
+
+            Memorymgmt ob1 = new Memorymgmt();
+            ob1.Dispose();//This calls Dispose method
+            Memorymgmt obj = new Memorymgmt();//This calls Destructor to release unmanaged resources
+            using (Memorymgmt ob2 =new Memorymgmt())//By using dispose method is automatically called
             {
                 Console.WriteLine("Inside using block");
             }
