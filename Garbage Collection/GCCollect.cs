@@ -18,10 +18,10 @@ namespace GCCollection
         public static void Main(string[] args)
         {
 
-            Garbage p = new Garbage();
+            Garbage ob1= new Garbage();
             Console.WriteLine("Assigning to null");
-            p = null;
-           GC.Collect();//Calling Garbage Collector manually
+            ob1= null;
+            GC.Collect();//Calling Garbage Collector manually
             Console.ReadLine();
 
         }
