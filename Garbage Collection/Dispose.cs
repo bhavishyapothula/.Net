@@ -10,7 +10,7 @@ namespace GarbageCollectionDispose
     {
         bool is_dispose_called = false;
         /// <summary>
-        /// Dispose function is implemented here,if it is called by developer suppresses the final method
+        /// Dispose function is implemented here,if it is called by developer suppresses the finalize method
         /// </summary>
         public void Dispose()
         {
