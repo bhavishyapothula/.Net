@@ -8,6 +8,9 @@ namespace GCCollection
         {
             Console.WriteLine("object created");
         }
+        /// <summary>
+        /// Finalize method
+        /// </summary>
         ~Garbage()
         {
             Console.WriteLine("object destructed");
@@ -15,10 +18,10 @@ namespace GCCollection
         public static void Main(string[] args)
         {
 
-            Garbage obj = new Garbage();
+            Garbage p = new Garbage();
             Console.WriteLine("Assigning to null");
-            obj = null;
-            GC.Collect();
+            p = null;
+           GC.Collect();//Calling Garbage Collector manually
             Console.ReadLine();
 
         }
