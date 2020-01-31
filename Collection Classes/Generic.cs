@@ -1,6 +1,6 @@
 using System;
 using System.Collections.Generic;
-namespace Genric
+namespace Generic
 {
     class Program
     {
